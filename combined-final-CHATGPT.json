@@ -1,0 +1,1421 @@
+{
+  "entities": [
+    {
+      "id": 1,
+      "text": "major depressive disorder",
+      "type": "medical_condition",
+      "code_system": "ICD-10",
+      "code": "F33.1"
+    },
+    {
+      "id": 2,
+      "text": "selective serotonin reuptake inhibitors",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "104964"
+    },
+    {
+      "id": 3,
+      "text": "electroconvulsive therapy",
+      "type": "treatment_type",
+      "code_system": "CPT",
+      "code": "90870"
+    },
+    {
+      "id": 4,
+      "text": "remission",
+      "type": "outcome",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 5,
+      "text": "depression-focused psychotherapy",
+      "type": "treatment_type",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 6,
+      "text": "combination of medications and psychotherapy",
+      "type": "treatment_type",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 7,
+      "text": "monoamine oxidase inhibitors",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "31350"
+    },
+    {
+      "id": 8,
+      "text": "tricyclic antidepressants",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "31356"
+    },
+    {
+      "id": 9,
+      "text": "norepinephrine reuptake inhibitors",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "31355"
+    },
+    {
+      "id": 10,
+      "text": "cognitive behavioral therapy",
+      "type": "treatment_type",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 11,
+      "text": "response rate",
+      "type": "outcome",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 12,
+      "text": "Hamilton Depression Rating Scale",
+      "type": "measure",
+      "code_system": "LOINC",
+      "code": "35000"
+    },
+    {
+      "id": 13,
+      "text": "treatment-resistant depression",
+      "type": "medical_condition",
+      "code_system": "ICD-10",
+      "code": "F33.2"
+    },
+    {
+      "id": 14,
+      "text": "ketamine",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "85968"
+    },
+    {
+      "id": 15,
+      "text": "esketamine",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "1012028"
+    },
+    {
+      "id": 16,
+      "text": "Cognitive-behavioral therapy",
+      "type": "treatment_type",
+      "code_system": "CPT",
+      "code": null
+    },
+    {
+      "id": 17,
+      "text": "interpersonal therapy",
+      "type": "treatment_type",
+      "code_system": "CPT",
+      "code": null
+    },
+    {
+      "id": 18,
+      "text": "supportive therapy",
+      "type": "treatment_type",
+      "code_system": "CPT",
+      "code": null
+    },
+    {
+      "id": 19,
+      "text": "psychoeducational intervention",
+      "type": "treatment_type",
+      "code_system": "CPT",
+      "code": null
+    },
+    {
+      "id": 20,
+      "text": "mindfulness-based cognitive therapy",
+      "type": "treatment_type",
+      "code_system": "CPT",
+      "code": null
+    },
+    {
+      "id": 21,
+      "text": "Cognitive Behavioral Analysis System of Psychotherapy",
+      "type": "treatment_type",
+      "code_system": "CPT",
+      "code": null
+    },
+    {
+      "id": 22,
+      "text": "problem-solving therapy",
+      "type": "treatment_type",
+      "code_system": "CPT",
+      "code": null
+    },
+    {
+      "id": 23,
+      "text": "marital and family therapy",
+      "type": "treatment_type",
+      "code_system": "CPT",
+      "code": null
+    },
+    {
+      "id": 24,
+      "text": "symptom reduction",
+      "type": "outcome",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 25,
+      "text": "group therapy",
+      "type": "treatment_type",
+      "code_system": "CPT",
+      "code": null
+    },
+    {
+      "id": 26,
+      "text": "repetitive transcranial magnetic stimulation",
+      "type": "treatment_type",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 27,
+      "text": "transcranial direct current stimulation",
+      "type": "treatment_type",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 28,
+      "text": "vagus nerve stimulation",
+      "type": "treatment_type",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 29,
+      "text": "deep brain stimulation",
+      "type": "treatment_type",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 30,
+      "text": "magnetic seizure therapy",
+      "type": "treatment_type",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 31,
+      "text": "patients with common comorbid conditions",
+      "type": "patient_group",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 32,
+      "text": "patients at high risk of relapse",
+      "type": "patient_group",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 33,
+      "text": "patients with severe and psychotic depression",
+      "type": "patient_group",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 34,
+      "text": "patients with bipolar depression",
+      "type": "patient_group",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 35,
+      "text": "resistant depression",
+      "type": "medical_condition",
+      "code_system": "ICD-10",
+      "code": "F33.2"
+    },
+    {
+      "id": 36,
+      "text": "phototherapy",
+      "type": "treatment_type",
+      "code_system": "CPT",
+      "code": null
+    },
+    {
+      "id": 37,
+      "text": "tranylcypromine",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "3111"
+    },
+    {
+      "id": 38,
+      "text": "nortriptyline",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "3132"
+    },
+    {
+      "id": 39,
+      "text": "phenelzine",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "3134"
+    },
+    {
+      "id": 40,
+      "text": "adolescents with MDD",
+      "type": "patient_group",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 41,
+      "text": "randomized controlled trial",
+      "type": "study",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 42,
+      "text": "venlafaxine",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "3121"
+    },
+    {
+      "id": 43,
+      "text": "bupropion",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "3100"
+    },
+    {
+      "id": 44,
+      "text": "citalopram",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "3095"
+    },
+    {
+      "id": 45,
+      "text": "trazodone",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "3134"
+    },
+    {
+      "id": 46,
+      "text": "vortioxetine",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "101156"
+    },
+    {
+      "id": 47,
+      "text": "anxious depression",
+      "type": "medical_condition",
+      "code_system": "ICD-10",
+      "code": null
+    },
+    {
+      "id": 48,
+      "text": "treatment efficacy",
+      "type": "outcome",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 49,
+      "text": "treatment-resistant depression",
+      "type": "patient_group",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 50,
+      "text": "randomized, double-blind, placebo-controlled trial",
+      "type": "study",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 51,
+      "text": "generalized anxiety disorder",
+      "type": "medical_condition",
+      "code_system": "ICD-10",
+      "code": "F41.1"
+    },
+    {
+      "id": 52,
+      "text": "interpersonal psychotherapy",
+      "type": "treatment_type",
+      "code_system": "CPT",
+      "code": null
+    },
+    {
+      "id": 53,
+      "text": "exercise",
+      "type": "treatment_type",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 54,
+      "text": "major depression",
+      "type": "medical_condition",
+      "code_system": "ICD-10",
+      "code": "F33.1"
+    },
+    {
+      "id": 55,
+      "text": "Meta-analysis of the Efficacy and Safety of Repetitive Transcranial Magnetic Stimulation (rTMS) in the Treatment of Depression",
+      "type": "study",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 56,
+      "text": "sertraline",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "672"
+    },
+    {
+      "id": 57,
+      "text": "buspirone",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "3133"
+    },
+    {
+      "id": 58,
+      "text": "response",
+      "type": "outcome",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 59,
+      "text": "STAR*D",
+      "type": "study",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 60,
+      "text": "Quick Inventory of Depressive Symptomatology",
+      "type": "measure",
+      "code_system": "LOINC",
+      "code": "35001-6"
+    },
+    {
+      "id": 61,
+      "text": "treatment-resistant patients",
+      "type": "patient_group",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 62,
+      "text": "Quick Inventory of Depressive Symptomatology–Self-Report",
+      "type": "measure",
+      "code_system": "LOINC",
+      "code": "35001-6"
+    },
+    {
+      "id": 63,
+      "text": "benzodiazepine",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": null
+    },
+    {
+      "id": 64,
+      "text": "adults with major depression",
+      "type": "patient_group",
+      "code_system": null,
+      "code": null
+    },
+    {
+      "id": 65,
+      "text": "antidepressant therapy",
+      "type": "treatment_type",
+      "code_system": "CPT",
+      "code": null
+    },
+    {
+      "id": 66,
+      "text": "anxious major depressive disorder",
+      "type": "medical_condition",
+      "code_system": "ICD-10",
+      "code": "F33.1"
+    },
+    {
+      "id": 67,
+      "text": "major depressive subtypes",
+      "type": "medical_condition",
+      "code_system": "ICD-10",
+      "code": "F33.x"
+    },
+    {
+      "id": 68,
+      "text": "fluoxetine",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "5450"
+    },
+    {
+      "id": 69,
+      "text": "imipramine",
+      "type": "medication",
+      "code_system": "RXNORM",
+      "code": "6823"
+    },
+    {
+      "id": 70,
+      "text": "antidepressant treatment",
+      "type": "treatment_type",
+      "code_system": "CPT",
+      "code": null
+    },
+    {
+      "id": 71,
+      "text": "response to treatment",
+      "type": "outcome",
+      "code_system": null,
+      "code": null
+    }
+  ],
+  "relationships": [
+    {
+      "head": 2,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "pharmacotherapy, especially selective serotonin reuptake inhibitors antidepressants, remains the most frequent option for treating depression during the acute phase."
+    },
+    {
+      "head": 3,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "electroconvulsive therapy is the most effective somatic therapy for depression in some specific situations."
+    },
+    {
+      "head": 5,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "depression-focused psychotherapy is the second most common option for helping patients overcome the acute phase, maintain remission, and prevent relapses."
+    },
+    {
+      "head": 6,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "combining medications, psychotherapy, and somatic therapies remains the most effective way to manage resistant forms of depression."
+    },
+    {
+      "head": 1,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "treatment during the acute phase of a major depressive episode aims to help the patient reach a remission state."
+    },
+    {
+      "head": 7,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "maois have demonstrated specific efficacy in treating depression with atypical features."
+    },
+    {
+      "head": 8,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "tcas are about as effective as other classes of antidepressants in treating major depression."
+    },
+    {
+      "head": 2,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "ssris have demonstrated comparable efficacy to tcas in treating major depression."
+    },
+    {
+      "head": 9,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "snris are generally considered effective as ssris in treating major depression."
+    },
+    {
+      "head": 1,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "ssris are recommended as the first-line treatment for patients with major depression."
+    },
+    {
+      "head": 1,
+      "tail": 11,
+      "type": "has_outcome",
+      "evidence": "in individual studies, venlafaxine and duloxetine are generally considered effective as ssris."
+    },
+    {
+      "head": 4,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "the hamilton depression is commonly used to measure remission in depression."
+    },
+    {
+      "head": 14,
+      "tail": 13,
+      "type": "treats",
+      "evidence": "ketamine has very effects on resistant unipolar depression."
+    },
+    {
+      "head": 15,
+      "tail": 13,
+      "type": "treats",
+      "evidence": "esketamine was approved by the united states food and drug administration in march 2019 for treatment-resistant depression."
+    },
+    {
+      "head": 14,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "the antidepressant effect of ketamine can persist for several days but eventually wanes."
+    },
+    {
+      "head": 15,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "esketamine use must be carefully monitored due to potential risks, but it is used for treatment-resistant depression."
+    },
+    {
+      "head": 4,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "the hamilton depression is commonly used to assess outcomes in depression treatment."
+    },
+    {
+      "head": 16,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "cbt is a well-known effective treatment method for mdd."
+    },
+    {
+      "head": 17,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "ipt is a first-line treatment for mild to moderate major depressive episodes in adults."
+    },
+    {
+      "head": 18,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "supportive therapy is commonly used to support depressed patients."
+    },
+    {
+      "head": 19,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "psychoeducational intervention has been recommended for patients with depression."
+    },
+    {
+      "head": 20,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "mindfulness-based cognitive therapy is proposed to maintain and prevent depression."
+    },
+    {
+      "head": 21,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "the european psychiatric association recommends using the cognitive behavioral analysis system of psychotherapy for treating chronic depression."
+    },
+    {
+      "head": 22,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "problem-solving therapy has been used in different clinical situations, like preventing depression among the elderly."
+    },
+    {
+      "head": 23,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "marital and family therapy is effective in treating some aspects of depression."
+    },
+    {
+      "head": 16,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "cbt is a well-known effective treatment method for mdd."
+    },
+    {
+      "head": 17,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "ipt is a first-line treatment for mild to moderate major depressive episodes in adults."
+    },
+    {
+      "head": 18,
+      "tail": 24,
+      "type": "has_outcome",
+      "evidence": "supportive therapy is commonly used to support depressed patients."
+    },
+    {
+      "head": 10,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "psychodynamic therapy’s efficacy in the acute phase of mdd is well-established compared to other forms of psychotherapy."
+    },
+    {
+      "head": 25,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "supportive gt and group cbt reduce depressive symptoms."
+    },
+    {
+      "head": 20,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "studies have shown that eight weeks of mbct treatment during remission reduces relapse."
+    },
+    {
+      "head": 3,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "ect is the most well-known treatment for resistant depression, and solid evidence supports its effectiveness and safety."
+    },
+    {
+      "head": 26,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "recent literature shows a significant difference between rtms and fictitious stimulation regarding its improvements in depressive symptoms."
+    },
+    {
+      "head": 27,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "the tdcs technique significantly outperforms the simulator in terms of the rate of response and remission."
+    },
+    {
+      "head": 4,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "the antidepressant effects of tdcs may involve long-term neuroplastic changes that continue to occur even after the acute phase of treatment."
+    },
+    {
+      "head": 11,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "preliminary research has revealed synergistic interactions between neuro-modulation and pharmacotherapy."
+    },
+    {
+      "head": 24,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "studies have shown that eight weeks of mbct treatment during remission reduces relapse."
+    },
+    {
+      "head": 31,
+      "tail": 4,
+      "type": "affects",
+      "evidence": "supportive gt and group cbt reduce depressive symptoms, especially in patients with common comorbid conditions."
+    },
+    {
+      "head": 32,
+      "tail": 4,
+      "type": "affects",
+      "evidence": "mbct is a potential alternative to reduce, or even stop, antidepressant treatment without increasing the risk of depressive recurrence, especially for patients at a high risk of relapse."
+    },
+    {
+      "head": 33,
+      "tail": 4,
+      "type": "affects",
+      "evidence": "ect is typically recommended for patients with severe and psychotic depression."
+    },
+    {
+      "head": 34,
+      "tail": 4,
+      "type": "affects",
+      "evidence": "tdcs can be used as a complementary intervention or as monotherapy to reduce depressive symptoms in unipolar or bipolar depression patients."
+    },
+    {
+      "head": 28,
+      "tail": 35,
+      "type": "treats",
+      "evidence": "vns is a therapeutic method that has been used for the last sixteen years to treat resistant unilateral or bipolar depression."
+    },
+    {
+      "head": 29,
+      "tail": 35,
+      "type": "treats",
+      "evidence": "according to the literature, dbs of the subgenual cingulate white matter elicited a clinical response in 60% of resistant depression patients."
+    },
+    {
+      "head": 30,
+      "tail": 35,
+      "type": "treats",
+      "evidence": "evidence supporting its effectiveness on depressive symptoms continues to grow."
+    },
+    {
+      "head": 3,
+      "tail": 35,
+      "type": "treats",
+      "evidence": "ect remains the most documented and effective method in this category."
+    },
+    {
+      "head": 36,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "this treatment method is effective both for those with seasonal and non-seasonal depression."
+    },
+    {
+      "head": 28,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "vns has demonstrated progressively increasing improvements in depressive symptoms."
+    },
+    {
+      "head": 29,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "dbs elicited a clinical response in 60% of resistant depression patients after six months."
+    },
+    {
+      "head": 30,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "evidence supporting its effectiveness on depressive symptoms continues to grow."
+    },
+    {
+      "head": 3,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "ect remains the most documented and effective method in this category."
+    },
+    {
+      "head": 36,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "this treatment method is effective both for those with seasonal and non-seasonal depression."
+    },
+    {
+      "head": 37,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "tranylcypromine vs nortriptyline vs placebo in depressed outpatients: a controlled trial."
+    },
+    {
+      "head": 38,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "tranylcypromine vs nortriptyline vs placebo in depressed outpatients: a controlled trial."
+    },
+    {
+      "head": 39,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "phenelzine treatment of melancholia."
+    },
+    {
+      "head": 10,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "comparative benefits and harms of second generation antidepressants and cognitive behavioral therapies in initial treatment of major depressive disorder."
+    },
+    {
+      "head": 40,
+      "tail": 11,
+      "type": "affects",
+      "evidence": "efficacy and tolerability of selective serotonin reuptake inhibitors compared with tricyclic antidepressants in depression treated in primary care."
+    },
+    {
+      "head": 11,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "evidence-based guidelines for treating depressive disorders with antidepressants."
+    },
+    {
+      "head": 41,
+      "tail": 37,
+      "type": "compares",
+      "evidence": "tranylcypromine vs venlafaxine plus mirtazapine following three failed antidepressant medication trials for depression: a star*d report."
+    },
+    {
+      "head": 42,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "the effect of venlafaxine compared with other antidepressants and placebo in the treatment of major depression."
+    },
+    {
+      "head": 43,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "efficacy of bupropion and the selective serotonin reuptake inhibitors in the treatment of major depressive disorder with high levels of anxiety."
+    },
+    {
+      "head": 44,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "allowing for non-adherence to treatment in a randomized controlled trial of two antidepressants."
+    },
+    {
+      "head": 45,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "a comparison of venlafaxine, trazodone, and placebo in major depression."
+    },
+    {
+      "head": 46,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "vortioxetine: a novel antidepressant for the treatment of major depressive disorder."
+    },
+    {
+      "head": 47,
+      "tail": 4,
+      "type": "affects",
+      "evidence": "efficacy of bupropion and the selective serotonin reuptake inhibitors in the treatment of major depressive disorder with high levels of anxiety."
+    },
+    {
+      "head": 41,
+      "tail": 42,
+      "type": "compares",
+      "evidence": "a meta-analysis of clinical trials comparing the serotonin-2 receptor antagonists trazodone and nefazodone with selective serotonin reuptake inhibitors for the treatment of major depressive disorder."
+    },
+    {
+      "head": 48,
+      "tail": 41,
+      "type": "measured_by",
+      "evidence": "a meta-analysis of clinical trials comparing the serotonin-2 receptor antagonists trazodone and nefazodone with selective serotonin reuptake inhibitors for the treatment of major depressive disorder."
+    },
+    {
+      "head": 15,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "efficacy and safety of intranasal esketamine for the treatment of major depressive disorder."
+    },
+    {
+      "head": 49,
+      "tail": 4,
+      "type": "affects",
+      "evidence": "riluzole combination therapy for moderate-to-severe major depressive disorder."
+    },
+    {
+      "head": 49,
+      "tail": 24,
+      "type": "affects",
+      "evidence": "riluzole combination therapy for moderate-to-severe major depressive disorder."
+    },
+    {
+      "head": 50,
+      "tail": 1,
+      "type": "compares",
+      "evidence": "riluzole combination therapy for moderate-to-severe major depressive disorder: a randomized, double-blind, placebo-controlled trial."
+    },
+    {
+      "head": 4,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "riluzole combination therapy for moderate-to-severe major depressive disorder: a randomized, double-blind, placebo-controlled trial."
+    },
+    {
+      "head": 22,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "effectiveness of problem-solving therapy for older, primary care patients with depression."
+    },
+    {
+      "head": 16,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "professional and paraprofessional group treatments for depression: a comparison of cognitive-behavioral and mutual support interventions."
+    },
+    {
+      "head": 52,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "interpersonal psychotherapy adapted for the group setting in the treatment of postpartum depression."
+    },
+    {
+      "head": 53,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "portuguese and brazilian guidelines for the treatment of depression: exercise as medicine."
+    },
+    {
+      "head": 1,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "factors associated with 1-year outcome of major depression in the community."
+    },
+    {
+      "head": 1,
+      "tail": 11,
+      "type": "has_outcome",
+      "evidence": "health-related quality of life in a clinical trial of ect followed by continuation pharmacotherapy: effects immediately after ect and at 24 weeks."
+    },
+    {
+      "head": 4,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "mindfulness-based cognitive therapy for patients with chronic, treatment-resistant depression."
+    },
+    {
+      "head": 49,
+      "tail": 1,
+      "type": "affects",
+      "evidence": "improvement after two sessions of electroconvulsive therapy predicts final remission in in-patients with major depression."
+    },
+    {
+      "head": 41,
+      "tail": 22,
+      "type": "compares",
+      "evidence": "problem-solving therapy vs supportive therapy in geriatric major depression with executive dysfunction."
+    },
+    {
+      "head": 3,
+      "tail": 54,
+      "type": "treats",
+      "evidence": "evidence for increased genetic risk load for major depression in patients assigned to electroconvulsive therapy."
+    },
+    {
+      "head": 26,
+      "tail": 54,
+      "type": "treats",
+      "evidence": "meta-analysis of the efficacy and safety of repetitive transcranial magnetic stimulation in the treatment of depression."
+    },
+    {
+      "head": 28,
+      "tail": 54,
+      "type": "treats",
+      "evidence": "therapeutic modalities for treatment resistant depression: focus on vagal nerve stimulation."
+    },
+    {
+      "head": 49,
+      "tail": 4,
+      "type": "affects",
+      "evidence": "effectiveness and safety of vagus nerve stimulation for severe treatment-resistant major depression in clinical practice after fda approval."
+    },
+    {
+      "head": 4,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "volume increase in the dentate gyrus after electroconvulsive therapy in depressed patients as measured with 7t."
+    },
+    {
+      "head": 28,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "vagus nerve stimulation for treatment-resistant depression: a randomized, controlled acute phase trial."
+    },
+    {
+      "head": 29,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "deep brain stimulation for treatment-resistant depression."
+    },
+    {
+      "head": 30,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "magnetic seizure therapy improves mood in refractory major depression."
+    },
+    {
+      "head": 49,
+      "tail": 4,
+      "type": "affects",
+      "evidence": "vagus nerve stimulation for treatment-resistant depression: a randomized, controlled acute phase trial."
+    },
+    {
+      "head": 4,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "magnetic seizure therapy improves mood in refractory major depression."
+    },
+    {
+      "head": 44,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "a total of 2,876 adult outpatients with major depressive disorder, enrolled from 18 primary and 23 psychiatric care sites, received citalopram in level 1 of star*d."
+    },
+    {
+      "head": 43,
+      "tail": 47,
+      "type": "treats",
+      "evidence": "in level 2, a total of 1,292 patients who did not remit with or tolerate citalopram were randomly assigned either to switch to bupropion."
+    },
+    {
+      "head": 56,
+      "tail": 47,
+      "type": "treats",
+      "evidence": "in level 2, patients were randomly assigned either to switch to sertraline."
+    },
+    {
+      "head": 42,
+      "tail": 47,
+      "type": "treats",
+      "evidence": "in level 2, patients were randomly assigned either to switch to venlafaxine."
+    },
+    {
+      "head": 57,
+      "tail": 47,
+      "type": "treats",
+      "evidence": "patients were designated as having anxious depression if their anxiety/somatization factor score from the 17-item hamilton depression was 7 or higher at baseline."
+    },
+    {
+      "head": 47,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "anxious depression is associated with poorer acute outcomes than nonanxious depression following antidepressant treatment."
+    },
+    {
+      "head": 47,
+      "tail": 58,
+      "type": "has_outcome",
+      "evidence": "rates of remission and response as well as times to remission and response were compared between patients with anxious depression and those with nonanxious depression."
+    },
+    {
+      "head": 59,
+      "tail": 47,
+      "type": "compares",
+      "evidence": "the authors conducted a secondary data analysis to compare antidepressant treatment outcomes for patients with anxious and nonanxious major depression in levels 1 and 2 of the star*d study."
+    },
+    {
+      "head": 4,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "patients were designated as having anxious depression if their anxiety/somatization factor score from the 17-item hamilton depression was 7 or higher at baseline."
+    },
+    {
+      "head": 58,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "ratings of side effect frequency, intensity, and burden, as well as the number of serious adverse events, were significantly greater in the anxious depression group."
+    },
+    {
+      "head": 44,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "the aim of citalopram treatment in level 1 was to achieve symptom remission."
+    },
+    {
+      "head": 44,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "the aim of citalopram treatment in level 1 was to achieve symptom remission, which was defined as qids-c score ≤5."
+    },
+    {
+      "head": 61,
+      "tail": 4,
+      "type": "affects",
+      "evidence": "patients could discontinue citalopram before 12 weeks if intolerable side effects made a medication change necessary."
+    },
+    {
+      "head": 59,
+      "tail": 44,
+      "type": "compares",
+      "evidence": "patients whose symptoms responded or remitted could enter the 12-month naturalistic follow-up phase, but all who did not achieve remission were encouraged to enter the next randomized trial in the star*d sequence."
+    },
+    {
+      "head": 4,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "the primary outcome measure was the ham-d score, obtained by research outcome assessors using telephone-based structured interviews."
+    },
+    {
+      "head": 60,
+      "tail": 1,
+      "type": "measured_by",
+      "evidence": "patients completed the version of the qids."
+    },
+    {
+      "head": 44,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "patients with anxious depression made fewer visits and spent less time in treatment than those without anxious depression."
+    },
+    {
+      "head": 44,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "remission was defined as an exit ham-d score ≤7 or last observed qids score ≤5."
+    },
+    {
+      "head": 44,
+      "tail": 11,
+      "type": "has_outcome",
+      "evidence": "response was defined as a reduction of ≥50% from baseline in the qids score at the last assessment."
+    },
+    {
+      "head": 4,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "logistic regression models were used to compare remission and response rates after adjustment for baseline severity of depression."
+    },
+    {
+      "head": 11,
+      "tail": 60,
+      "type": "measured_by",
+      "evidence": "logistic regression models were used to compare remission and response rates after adjustment for baseline severity of depression."
+    },
+    {
+      "head": 44,
+      "tail": 47,
+      "type": "treats",
+      "evidence": "despite similar citalopram dosages in the two groups and the longer treatment exposure in the nonanxious depression group..."
+    },
+    {
+      "head": 43,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "randomly assigned either to switch to bupropion..."
+    },
+    {
+      "head": 56,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "randomly assigned either to switch to sertraline..."
+    },
+    {
+      "head": 42,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "randomly assigned either to switch to venlafaxine..."
+    },
+    {
+      "head": 47,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "remission rates were significantly lower in patients with anxious depression..."
+    },
+    {
+      "head": 47,
+      "tail": 11,
+      "type": "has_outcome",
+      "evidence": "response rates were also significantly lower for patients with anxious depression..."
+    },
+    {
+      "head": 61,
+      "tail": 4,
+      "type": "affects",
+      "evidence": "patients with anxious depression had a greater reduction in anxiety/somatization scores..."
+    },
+    {
+      "head": 59,
+      "tail": 47,
+      "type": "compares",
+      "evidence": "the time to first remission and first response differed significantly between the anxious and nonanxious depression groups..."
+    },
+    {
+      "head": 4,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "remission as defined by the ham-d..."
+    },
+    {
+      "head": 4,
+      "tail": 62,
+      "type": "measured_by",
+      "evidence": "remission as defined by the qids..."
+    },
+    {
+      "head": 44,
+      "tail": 47,
+      "type": "treats",
+      "evidence": "the average r2 values ranged from 0.014 to 0.020, with the total score of the ham-d anxiety/somati- zation factor being the best predictor, followed closely by the total score of the ham-d psychic and somatic anxiety items, and then by whether anxious depression was present."
+    },
+    {
+      "head": 47,
+      "tail": 4,
+      "type": "affects",
+      "evidence": "patients with anxious depression were less likely than those with nonanxious depression to achieve remission."
+    },
+    {
+      "head": 59,
+      "tail": 47,
+      "type": "compares",
+      "evidence": "this is the largest sample used thus far to examine whether major depression with anxious features is associated with a different treatment outcome than nonanxious major depression."
+    },
+    {
+      "head": 4,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "the lower ham-d remission rates observed in the anxious depression group could be due in part to residual symptoms of anxiety, which may have increased the ham-d score."
+    },
+    {
+      "head": 47,
+      "tail": 1,
+      "type": "has_outcome",
+      "evidence": "the presence of certain clinical and sociodemographic characteristics should alert us to the possibility that anxiety may be a prominent feature of a patient’s major depressive disorder."
+    },
+    {
+      "head": 47,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "anxious depression might be a valid diagnostic subtype of major depressive disorder."
+    },
+    {
+      "head": 59,
+      "tail": 47,
+      "type": "compares",
+      "evidence": "the association between anxious depression and poorer treatment outcome with antidepressant monotherapy in level 1 of star*d held true regardless of how we defined anxious depression."
+    },
+    {
+      "head": 4,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "our definition of anxious depression was based on the severity of anxiety symptoms as measured by the ham-d anxiety/somatization factor."
+    },
+    {
+      "head": 44,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "remission, by ham-d criteriona"
+    },
+    {
+      "head": 43,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "remission, by ham-d criteriona"
+    },
+    {
+      "head": 56,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "remission, by ham-d criteriona"
+    },
+    {
+      "head": 42,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "remission, by ham-d criteriona"
+    },
+    {
+      "head": 57,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "remission, by ham-d criteriona"
+    },
+    {
+      "head": 44,
+      "tail": 54,
+      "type": "treats",
+      "evidence": "ms. d was started on a course of antidepressant therapy with citalopram."
+    },
+    {
+      "head": 63,
+      "tail": 54,
+      "type": "treats",
+      "evidence": "a benzodiazepine was prescribed, which brought about a significant improvement in her insomnia and agitation."
+    },
+    {
+      "head": 44,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "ms. d reported a significant improvement in all her symptoms, and remission was achieved at the end of the 10th week of treatment."
+    },
+    {
+      "head": 63,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "a benzodiazepine was prescribed, which brought about a significant improvement in her insomnia and agitation."
+    },
+    {
+      "head": 64,
+      "tail": 4,
+      "type": "affects",
+      "evidence": "ms. d continued to report a number of physical symptoms throughout the first 4 weeks of treatment, but she was able to remain on citalopram."
+    },
+    {
+      "head": 4,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "ms. d reported a significant improvement in all her symptoms, and remission was achieved at the end of the 10th week of treatment."
+    },
+    {
+      "head": 42,
+      "tail": 66,
+      "type": "treats",
+      "evidence": "achieving remission with venlafaxine and fluoxetine in major depression: its relationship to anxiety symptoms."
+    },
+    {
+      "head": 68,
+      "tail": 66,
+      "type": "treats",
+      "evidence": "achieving remission with venlafaxine and fluoxetine in major depression: its relationship to anxiety symptoms."
+    },
+    {
+      "head": 56,
+      "tail": 66,
+      "type": "treats",
+      "evidence": "effect of concurrent anxiety on response to sertraline and imipramine in patients with chronic depression."
+    },
+    {
+      "head": 69,
+      "tail": 66,
+      "type": "treats",
+      "evidence": "effect of concurrent anxiety on response to sertraline and imipramine in patients with chronic depression."
+    },
+    {
+      "head": 70,
+      "tail": 67,
+      "type": "treats",
+      "evidence": "anxious depression in elderly patients: response to antidepressant treatment."
+    },
+    {
+      "head": 66,
+      "tail": 4,
+      "type": "has_outcome",
+      "evidence": "achieving remission with venlafaxine and fluoxetine in major depression: its relationship to anxiety symptoms."
+    },
+    {
+      "head": 66,
+      "tail": 71,
+      "type": "has_outcome",
+      "evidence": "effect of concurrent anxiety on response to sertraline and imipramine in patients with chronic depression."
+    },
+    {
+      "head": 59,
+      "tail": 66,
+      "type": "compares",
+      "evidence": "background and rationale for the sequenced treatment alternatives to relieve depression study."
+    },
+    {
+      "head": 4,
+      "tail": 12,
+      "type": "measured_by",
+      "evidence": "a scale for depression."
+    },
+    {
+      "head": 56,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "bupropion, sertraline, or venlafaxine after failure of ssris for depression."
+    },
+    {
+      "head": 43,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "bupropion, sertraline, or venlafaxine after failure of ssris for depression."
+    },
+    {
+      "head": 42,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "bupropion, sertraline, or venlafaxine after failure of ssris for depression."
+    },
+    {
+      "head": 59,
+      "tail": 48,
+      "type": "compares",
+      "evidence": "medication augmentation after the failure of ssris for depression."
+    }
+  ]
+}
