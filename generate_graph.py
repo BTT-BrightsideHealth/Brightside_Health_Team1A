@@ -17,7 +17,7 @@ entities = data["entities"]
 relationships = data["relationships"]
 
 # load Neo4j Driver
-driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))    
+driver = GraphDatabase.driver(NEO4J_URI, auth=None)  
 
 # Create Entities
 def insert_entities(tx, entities):
