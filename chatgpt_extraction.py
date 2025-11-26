@@ -7,117 +7,69 @@ from pypdf import PdfReader  # pip install pypdf
 
 # System Prompt
 SYSTEM_PROMPT = """
-You are an information extraction system for medical research papers.
+You are a "Maximum Yield" Medical Extraction Engine.
 
-Given the text of a paper, you must return a SINGLE JSON object with exactly these top-level keys:
-- "entities": list
-- "relationships": list
-- "interactions": list
+Your goal is to extract a Knowledge Graph with the HIGHEST POSSIBLE number of valid interactions.
+You must adopt a "Zero-Filter" policy regarding interaction significance: if there is a theoretical, mechanistic, or protocol-based reason why two things interact, YOU MUST LIST IT.
+
+Output a SINGLE JSON object.
 
 =========================================================
-1) ENTITIES
+1) ENTITIES (STRICT SCHEMA)
 =========================================================
-Each entity is:
-  {
-    "id": <int>,              // unique, incremental, starting at 1
-    "text": <string>,         // surface form from the paper
-    "type": <string>          // one of:
-                              // "medical_condition", "medication",
-                              // "treatment_type", "outcome", "measure",
-                              // "patient_group", "study", "other"
-  }
+Extract entities into a list of objects with unique integer IDs.
+Include ALL:
+- "medication": (e.g., "fluoxetine", "sertraline")
+- "treatment_type": (e.g., "CBT", "ECT", "rTMS", "EMDR", "Psychodynamic Therapy")
+- "medical_condition", "outcome", "measure", "patient_group"
 
-Examples of entity types:
-- "major depressive disorder" -> "medical_condition"
-- "sertraline"                -> "medication"
-- "cognitive-behavioral therapy" -> "treatment_type"
-- "remission", "relapse"     -> "outcome"
-- "Hamilton Depression Rating Scale (HDRS)" -> "measure"
-- "adolescents", "elderly", "pregnant patients" -> "patient_group"
-- Named clinical trials or large studies -> "study"
+Format:
+[
+  { "id": 1, "text": "fluoxetine", "type": "medication" },
+  { "id": 2, "text": "CBT", "type": "treatment_type" }
+]
 
 =========================================================
 2) RELATIONSHIPS
 =========================================================
-Each relationship is:
+Standard explicit relationships found in the text.
+Format: { "head": 1, "tail": 2, "type": "treats", "evidence": "..." }
+
+=========================================================
+3) INTERACTIONS (MAXIMALIST MODE)
+=========================================================
+**INSTRUCTION:** Cross-reference EVERY entity of type "medication" and "treatment_type" against every other one.
+You must output an interaction for ANY of the following categories. Do not omit "minor" or "theoretical" risks.
+
+**CATEGORY A: PHARMACOLOGIC CLASHES (The usual stuff)**
+- **Serotonin/Norepinephrine:** Any two drugs affecting these neurotransmitters.
+- **Seizure Threshold:** Bupropion, TCAs, Clozapine, Tramadol, etc.
+- **Metabolic:** CYP450 inhibitors + substrates.
+- **Sedation:** Any two agents with sedative properties.
+
+**CATEGORY B: THERAPEUTIC FRICTION (Therapy-Therapy & Drug-Therapy)**
+- **Interference with Learning:** Sedatives (Benzos/Z-drugs) + Psychotherapy (CBT/Exposure). *Mechanism: Impaired emotional learning/habituation.*
+- **Conflicting Modalities:** Directive therapies (CBT) + Non-directive therapies (Psychoanalysis) concurrently. *Mechanism: Conflicting patient instructions.*
+- **Somatic Overload:** Multiple brain stimulation therapies (ECT + rTMS + DBS) concurrently. *Mechanism: Excessive neural stimulation/unknown safety profile.*
+- **Protocol Clashes:** Therapies requiring alert states vs. sedating medications.
+
+**CATEGORY C: PHYSIOLOGICAL BURDEN**
+- **Cardiovascular:** Stimulants + Cardiovascular active drugs.
+- **Anticholinergic Load:** Any cumulative anticholinergic burden (TCAs + Antipsychotics + Antihistamines).
+
+**OUTPUT RULES:**
+- **Goal:** 20-40 interactions for complex texts.
+- **Format:**
   {
-    "head": <int>,            // entity id
-    "tail": <int>,            // entity id
-    "type": <string>,         // e.g. "treats", "has_outcome", "affects", "compares"
-    "evidence": <string>      // quote or short paraphrase from the paper
+    "id": <int>,
+    "entity_ids": [<int>, <int>],
+    "interaction_type": "use_with_caution" (or "contraindicated"),
+    "note": "Short explanation of the clash.",
+    "evidence": "Standard clinical knowledge regarding [mechanism] OR quote."
   }
 
-Examples:
-- A medication that treats a condition: type = "treats"
-- A treatment that leads to remission/relapse: type = "has_outcome"
-- A patient group that changes efficacy/safety of a treatment: type = "affects"
-- A study directly comparing two treatments: type = "compares"
-
-All "head" and "tail" values must refer to valid entity IDs.
-
-=========================================================
-3) INTERACTIONS  (THIS IS IMPORTANT)
-=========================================================
-Now, using BOTH:
-- the information from this paper, AND
-- your general, widely taught medical and pharmacologic knowledge,
-
-identify pairs of medications and/or somatic treatments from the "entities" list
-that usually:
-  - SHOULD NOT be taken together (contraindicated), or
-  - SHOULD ONLY be used together with strong caution and close monitoring.
-
-Work ONLY with entities that already appear in the "entities" array and whose type is
-"medication" or "treatment_type".
-
-Each interaction is:
-  {
-    "id": <int>,                      // unique, incremental, starting at 1
-    "entity_ids": [<int>, <int>],     // EXACTLY TWO entity IDs from "entities"
-    "interaction_type": <string>,     // "contraindicated" or "use_with_caution"
-    "note": <string>,                 // short plain-language explanation
-    "evidence": <string>              // brief mechanism / rationale or quote
-  }
-
-Details:
-- "entity_ids":
-    - Must contain exactly two IDs.
-    - Each ID must match an existing entity "id" from the "entities" array.
-- "interaction_type":
-    - "contraindicated" if the combination is generally avoided / not recommended.
-    - "use_with_caution" if the combo is possible but carries important risks
-      (e.g. serotonin syndrome, additive sedation, QT prolongation, blood pressure
-      changes) and typically needs monitoring or specialist oversight.
-- "note":
-    - 1–2 sentences in plain language, and it MUST clearly mention the TWO
-      medications/treatments by name, e.g.:
-      "Combining SSRIs and tricyclic antidepressants increases serotonergic effects
-       and should be done only with specialist oversight."
-- "evidence":
-    - Either:
-      - a short explanation of the known pharmacologic mechanism, OR
-      - a relevant quote/paraphrase from the paper IF it explicitly mentions
-        the interaction.
-
-How many interactions:
-- When there are multiple medications or somatic treatments in "entities",
-  try to propose roughly 5–10 of the most clinically relevant pairs.
-- Do NOT invent obscure or speculative interactions. Focus on commonly taught,
-  clinically meaningful cautions and contraindications.
-- If you truly cannot identify any important interactions between the listed
-  entities, you may return:
-  "interactions": []
-
-=========================================================
-4) GENERAL RULES
-=========================================================
-- All "head", "tail", and "entity_ids" values must refer to valid "id" values in "entities".
-- Entity IDs in "entities" should be sequential starting from 1.
-- Use verbatim names from the paper for "text" where possible.
-- This JSON is for RESEARCH AND EDUCATIONAL purposes only and MUST NOT be used
-  for real clinical or treatment decisions.
-
-Return ONLY the JSON object. Do not include any extra text before or after it.
+**CRITICAL:**
+If two entities exist in the text, and there is ANY widely known medical reason to pause before combining them, LIST IT.
 """
 
 # Make sure OPENAI_API_KEY is set in your environment
