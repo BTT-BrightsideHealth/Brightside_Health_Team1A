@@ -1,0 +1,152 @@
+{
+  "entities": [
+    {
+      "id": 1,
+      "text": "major depressive disorder",
+      "type": "medical_condition"
+    },
+    {
+      "id": 2,
+      "text": "selective serotonin reuptake inhibitors",
+      "type": "medication"
+    },
+    {
+      "id": 3,
+      "text": "depression-focused psychotherapy",
+      "type": "treatment_type"
+    },
+    {
+      "id": 4,
+      "text": "electroconvulsive therapy",
+      "type": "treatment_type"
+    },
+    {
+      "id": 5,
+      "text": "tricyclic antidepressants",
+      "type": "medication"
+    },
+    {
+      "id": 6,
+      "text": "serotonin-norepinephrine reuptake inhibitors",
+      "type": "medication"
+    },
+    {
+      "id": 7,
+      "text": "ketamine",
+      "type": "medication"
+    },
+    {
+      "id": 8,
+      "text": "cognitive-behavioral therapy",
+      "type": "treatment_type"
+    },
+    {
+      "id": 9,
+      "text": "bupropion",
+      "type": "medication"
+    },
+    {
+      "id": 10,
+      "text": "mirtazapine",
+      "type": "medication"
+    }
+  ],
+  "relationships": [
+    {
+      "head": 2,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "Pharmacotherapy, especially selective serotonin reuptake inhibitors antidepressants, remains the most frequent option for treating depression during the acute phase."
+    },
+    {
+      "head": 3,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "Depression-focused psychotherapy is the second most common option for helping patients overcome the acute phase."
+    },
+    {
+      "head": 4,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "Electroconvulsive therapy is the most effective somatic therapy for depression in some specific situations."
+    },
+    {
+      "head": 5,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "TCAs have remained among the most frequently prescribed drugs worldwide."
+    },
+    {
+      "head": 6,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "SNRIs emerged during the 1990s to protect patients against the adverse effects of SSRIs."
+    },
+    {
+      "head": 7,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "In intravenous sub-anesthetic doses, ketamine has very quick effects on resistant unipolar (and, possibly, bipolar) depression."
+    },
+    {
+      "head": 8,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "CBT is one of the most well-documented and validated psychotherapeutic methods available."
+    },
+    {
+      "head": 9,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "Bupropion appears to have a more activating profile than SSRIs."
+    },
+    {
+      "head": 10,
+      "tail": 1,
+      "type": "treats",
+      "evidence": "Mirtazapine is about as effective as SSRIs."
+    }
+  ],
+  "interactions": [
+    {
+      "id": 1,
+      "entity_ids": [
+        2,
+        5
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Combining selective serotonin reuptake inhibitors and tricyclic antidepressants can increase the risk of serotonin syndrome and should be monitored closely.",
+      "evidence": "MAOIs have demonstrated specific efficacy in treating depression with atypical features, such as reactive moods, reverse neuro-vegetative symptoms, and sensitivity to rejection."
+    },
+    {
+      "id": 2,
+      "entity_ids": [
+        7,
+        9
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Using selective serotonin reuptake inhibitors and bupropion together may increase the risk of seizures, especially in predisposed individuals.",
+      "evidence": "Bupropion may increase risk for seizures (low evidence)."
+    },
+    {
+      "id": 2,
+      "entity_ids": [
+        6,
+        10
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Combining selective serotonin reuptake inhibitors and mirtazapine can lead to increased sedation and should be monitored.",
+      "evidence": "Mirtazapine's ability to antagonize serotoninergic subtypes receptors could also increase norepinephrine and dopamine release."
+    },
+    {
+      "id": 3,
+      "entity_ids": [
+        4,
+        8
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Combining psychotherapy and electroconvulsive therapy may enhance treatment outcomes but requires careful monitoring.",
+      "evidence": "Combining medications, psychotherapy, and somatic therapies remains the most effective way to manage resistant forms of depression."
+    }
+  ]
+}
