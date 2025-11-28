@@ -1,0 +1,14 @@
+# VCS / IDE
+.git
+.gitignore
+.vscode
+.idea
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS junk
+.DS_Store
