@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #111;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#d62728", "font": {"color": "white"}, "id": 1, "label": "major depressive disorder", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 2, "label": "selective serotonin reuptake inhibitors", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 3, "label": "electroconvulsive therapy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 4, "label": "remission", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 5, "label": "depression-focused psychotherapy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 6, "label": "combination of medications and psychotherapy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 7, "label": "monoamine oxidase inhibitors", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 8, "label": "tricyclic antidepressants", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 9, "label": "norepinephrine reuptake inhibitors", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 10, "label": "cognitive behavioral therapy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 11, "label": "response rate", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 12, "label": "Hamilton Depression Rating Scale", "shape": "dot"}, {"color": "#d62728", "font": {"color": "white"}, "id": 13, "label": "treatment-resistant depression", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 14, "label": "ketamine", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 15, "label": "esketamine", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 16, "label": "Cognitive-behavioral therapy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 17, "label": "interpersonal therapy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 18, "label": "supportive therapy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 19, "label": "psychoeducational intervention", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 20, "label": "mindfulness-based cognitive therapy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 21, "label": "Cognitive Behavioral Analysis System of Psychotherapy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 22, "label": "problem-solving therapy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 23, "label": "marital and family therapy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 24, "label": "symptom reduction", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 25, "label": "group therapy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 26, "label": "repetitive transcranial magnetic stimulation", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 27, "label": "transcranial direct current stimulation", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 28, "label": "vagus nerve stimulation", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 29, "label": "deep brain stimulation", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 30, "label": "magnetic seizure therapy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 31, "label": "patients with common comorbid conditions", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 32, "label": "patients at high risk of relapse", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 33, "label": "patients with severe and psychotic depression", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 34, "label": "patients with bipolar depression", "shape": "dot"}, {"color": "#d62728", "font": {"color": "white"}, "id": 35, "label": "resistant depression", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 36, "label": "phototherapy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 37, "label": "tranylcypromine", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 38, "label": "nortriptyline", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 39, "label": "phenelzine", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 40, "label": "adolescents with MDD", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 41, "label": "randomized controlled trial", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 42, "label": "venlafaxine", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 43, "label": "bupropion", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 44, "label": "citalopram", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 45, "label": "trazodone", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 46, "label": "vortioxetine", "shape": "dot"}, {"color": "#d62728", "font": {"color": "white"}, "id": 47, "label": "anxious depression", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 48, "label": "treatment efficacy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 49, "label": "treatment-resistant depression", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 50, "label": "randomized, double-blind, placebo-controlled trial", "shape": "dot"}, {"color": "#d62728", "font": {"color": "white"}, "id": 51, "label": "generalized anxiety disorder", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 52, "label": "interpersonal psychotherapy", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 53, "label": "exercise", "shape": "dot"}, {"color": "#d62728", "font": {"color": "white"}, "id": 54, "label": "major depression", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 55, "label": "Meta-analysis of the Efficacy and Safety of Repetitive Transcranial Magnetic Stimulation (rTMS) in the Treatment of Depression", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 56, "label": "sertraline", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 57, "label": "buspirone", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 58, "label": "response", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 59, "label": "STAR*D", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 60, "label": "Quick Inventory of Depressive Symptomatology", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 61, "label": "treatment-resistant patients", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 62, "label": "Quick Inventory of Depressive Symptomatology\u2013Self-Report", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 63, "label": "benzodiazepine", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 64, "label": "adults with major depression", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 65, "label": "antidepressant therapy", "shape": "dot"}, {"color": "#d62728", "font": {"color": "white"}, "id": 66, "label": "anxious major depressive disorder", "shape": "dot"}, {"color": "#d62728", "font": {"color": "white"}, "id": 67, "label": "major depressive subtypes", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 68, "label": "fluoxetine", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 69, "label": "imipramine", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 70, "label": "antidepressant treatment", "shape": "dot"}, {"color": "#6AAFFF", "font": {"color": "white"}, "id": 71, "label": "response to treatment", "shape": "dot"}]);
+                  edges = new vis.DataSet([{"from": 1, "title": "has_outcome", "to": 4}, {"from": 1, "title": "has_outcome", "to": 11}, {"from": 2, "title": "treats", "to": 1}, {"from": 3, "title": "treats", "to": 1}, {"from": 3, "title": "treats", "to": 35}, {"from": 3, "title": "has_outcome", "to": 4}, {"from": 3, "title": "treats", "to": 54}, {"from": 4, "title": "measured_by", "to": 12}, {"from": 4, "title": "measured_by", "to": 62}, {"from": 5, "title": "treats", "to": 1}, {"from": 6, "title": "treats", "to": 1}, {"from": 7, "title": "treats", "to": 1}, {"from": 8, "title": "treats", "to": 1}, {"from": 9, "title": "treats", "to": 1}, {"from": 10, "title": "treats", "to": 1}, {"from": 11, "title": "measured_by", "to": 12}, {"from": 11, "title": "measured_by", "to": 60}, {"from": 14, "title": "treats", "to": 13}, {"from": 14, "title": "has_outcome", "to": 4}, {"from": 15, "title": "treats", "to": 13}, {"from": 15, "title": "has_outcome", "to": 4}, {"from": 15, "title": "treats", "to": 1}, {"from": 16, "title": "treats", "to": 1}, {"from": 16, "title": "has_outcome", "to": 4}, {"from": 17, "title": "treats", "to": 1}, {"from": 17, "title": "has_outcome", "to": 4}, {"from": 18, "title": "treats", "to": 1}, {"from": 18, "title": "has_outcome", "to": 24}, {"from": 19, "title": "treats", "to": 1}, {"from": 20, "title": "treats", "to": 1}, {"from": 21, "title": "treats", "to": 1}, {"from": 22, "title": "treats", "to": 1}, {"from": 23, "title": "treats", "to": 1}, {"from": 24, "title": "measured_by", "to": 12}, {"from": 25, "title": "treats", "to": 1}, {"from": 26, "title": "treats", "to": 1}, {"from": 26, "title": "treats", "to": 54}, {"from": 27, "title": "treats", "to": 1}, {"from": 28, "title": "treats", "to": 35}, {"from": 28, "title": "has_outcome", "to": 4}, {"from": 28, "title": "treats", "to": 54}, {"from": 28, "title": "treats", "to": 1}, {"from": 29, "title": "treats", "to": 35}, {"from": 29, "title": "has_outcome", "to": 4}, {"from": 29, "title": "treats", "to": 1}, {"from": 30, "title": "treats", "to": 35}, {"from": 30, "title": "has_outcome", "to": 4}, {"from": 30, "title": "treats", "to": 1}, {"from": 31, "title": "affects", "to": 4}, {"from": 32, "title": "affects", "to": 4}, {"from": 33, "title": "affects", "to": 4}, {"from": 34, "title": "affects", "to": 4}, {"from": 36, "title": "treats", "to": 1}, {"from": 36, "title": "has_outcome", "to": 4}, {"from": 37, "title": "treats", "to": 1}, {"from": 38, "title": "treats", "to": 1}, {"from": 39, "title": "treats", "to": 1}, {"from": 40, "title": "affects", "to": 11}, {"from": 41, "title": "compares", "to": 37}, {"from": 41, "title": "compares", "to": 42}, {"from": 41, "title": "compares", "to": 22}, {"from": 42, "title": "treats", "to": 1}, {"from": 42, "title": "treats", "to": 47}, {"from": 42, "title": "has_outcome", "to": 4}, {"from": 42, "title": "treats", "to": 66}, {"from": 43, "title": "treats", "to": 1}, {"from": 43, "title": "treats", "to": 47}, {"from": 43, "title": "has_outcome", "to": 4}, {"from": 44, "title": "treats", "to": 1}, {"from": 44, "title": "has_outcome", "to": 4}, {"from": 44, "title": "has_outcome", "to": 11}, {"from": 44, "title": "treats", "to": 47}, {"from": 44, "title": "treats", "to": 54}, {"from": 45, "title": "treats", "to": 1}, {"from": 46, "title": "treats", "to": 1}, {"from": 47, "title": "affects", "to": 4}, {"from": 47, "title": "has_outcome", "to": 58}, {"from": 47, "title": "has_outcome", "to": 11}, {"from": 47, "title": "treats", "to": 1}, {"from": 48, "title": "measured_by", "to": 41}, {"from": 49, "title": "affects", "to": 4}, {"from": 49, "title": "affects", "to": 24}, {"from": 49, "title": "affects", "to": 1}, {"from": 50, "title": "compares", "to": 1}, {"from": 52, "title": "treats", "to": 1}, {"from": 53, "title": "treats", "to": 1}, {"from": 56, "title": "treats", "to": 47}, {"from": 56, "title": "treats", "to": 1}, {"from": 56, "title": "has_outcome", "to": 4}, {"from": 56, "title": "treats", "to": 66}, {"from": 57, "title": "treats", "to": 47}, {"from": 57, "title": "has_outcome", "to": 4}, {"from": 58, "title": "measured_by", "to": 12}, {"from": 59, "title": "compares", "to": 47}, {"from": 59, "title": "compares", "to": 44}, {"from": 59, "title": "compares", "to": 66}, {"from": 59, "title": "compares", "to": 48}, {"from": 60, "title": "measured_by", "to": 1}, {"from": 61, "title": "affects", "to": 4}, {"from": 63, "title": "treats", "to": 54}, {"from": 63, "title": "has_outcome", "to": 4}, {"from": 64, "title": "affects", "to": 4}, {"from": 66, "title": "has_outcome", "to": 4}, {"from": 66, "title": "has_outcome", "to": 71}, {"from": 68, "title": "treats", "to": 66}, {"from": 69, "title": "treats", "to": 66}, {"from": 70, "title": "treats", "to": 67}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
