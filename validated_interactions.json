@@ -1,0 +1,670 @@
+{
+  "entities": [
+    {
+      "id": 1,
+      "text": "fluoxetine",
+      "type": "medication"
+    },
+    {
+      "id": 2,
+      "text": "sertraline",
+      "type": "medication"
+    },
+    {
+      "id": 3,
+      "text": "paroxetine",
+      "type": "medication"
+    },
+    {
+      "id": 4,
+      "text": "citalopram",
+      "type": "medication"
+    },
+    {
+      "id": 5,
+      "text": "escitalopram",
+      "type": "medication"
+    },
+    {
+      "id": 6,
+      "text": "venlafaxine",
+      "type": "medication"
+    },
+    {
+      "id": 7,
+      "text": "duloxetine",
+      "type": "medication"
+    },
+    {
+      "id": 8,
+      "text": "bupropion",
+      "type": "medication"
+    },
+    {
+      "id": 9,
+      "text": "mirtazapine",
+      "type": "medication"
+    },
+    {
+      "id": 10,
+      "text": "ketamine",
+      "type": "medication"
+    },
+    {
+      "id": 11,
+      "text": "ECT",
+      "type": "treatment_type"
+    },
+    {
+      "id": 12,
+      "text": "CBT",
+      "type": "treatment_type"
+    },
+    {
+      "id": 13,
+      "text": "IPT",
+      "type": "treatment_type"
+    },
+    {
+      "id": 14,
+      "text": "rTMS",
+      "type": "treatment_type"
+    },
+    {
+      "id": 15,
+      "text": "tDCS",
+      "type": "treatment_type"
+    },
+    {
+      "id": 16,
+      "text": "DBS",
+      "type": "treatment_type"
+    },
+    {
+      "id": 17,
+      "text": "psychodynamic therapy",
+      "type": "treatment_type"
+    },
+    {
+      "id": 18,
+      "text": "patient group",
+      "type": "patient_group"
+    },
+    {
+      "id": 19,
+      "text": "major depressive disorder",
+      "type": "medical_condition"
+    },
+    {
+      "id": 20,
+      "text": "treatment-resistant depression",
+      "type": "medical_condition"
+    },
+    {
+      "id": 21,
+      "text": "remission",
+      "type": "outcome"
+    },
+    {
+      "id": 22,
+      "text": "relapse prevention",
+      "type": "outcome"
+    }
+  ],
+  "relationships": [
+    {
+      "head": 1,
+      "tail": 19,
+      "type": "treats",
+      "evidence": "Fluoxetine is a selective serotonin reuptake inhibitor (SSRI) commonly used to treat major depressive disorder."
+    },
+    {
+      "head": 2,
+      "tail": 19,
+      "type": "treats",
+      "evidence": "Sertraline is an SSRI indicated for the treatment of major depressive disorder."
+    },
+    {
+      "head": 3,
+      "tail": 19,
+      "type": "treats",
+      "evidence": "Paroxetine is an SSRI used to treat major depressive disorder."
+    },
+    {
+      "head": 4,
+      "tail": 19,
+      "type": "treats",
+      "evidence": "Citalopram is an SSRI effective in treating major depressive disorder."
+    },
+    {
+      "head": 5,
+      "tail": 19,
+      "type": "treats",
+      "evidence": "Escitalopram is an SSRI used for major depressive disorder."
+    },
+    {
+      "head": 6,
+      "tail": 19,
+      "type": "treats",
+      "evidence": "Venlafaxine is a serotonin-norepinephrine reuptake inhibitor (SNRI) used for major depressive disorder."
+    },
+    {
+      "head": 7,
+      "tail": 19,
+      "type": "treats",
+      "evidence": "Duloxetine is an SNRI indicated for major depressive disorder."
+    },
+    {
+      "head": 8,
+      "tail": 19,
+      "type": "treats",
+      "evidence": "Bupropion is an atypical antidepressant used for major depressive disorder."
+    },
+    {
+      "head": 9,
+      "tail": 19,
+      "type": "treats",
+      "evidence": "Mirtazapine is an antidepressant used for major depressive disorder."
+    },
+    {
+      "head": 10,
+      "tail": 20,
+      "type": "treats",
+      "evidence": "Ketamine is used for treatment-resistant depression."
+    },
+    {
+      "head": 11,
+      "tail": 19,
+      "type": "treats",
+      "evidence": "ECT is a somatic therapy effective for major depressive disorder."
+    },
+    {
+      "head": 12,
+      "tail": 19,
+      "type": "treats",
+      "evidence": "CBT is a psychotherapy method used to treat major depressive disorder."
+    },
+    {
+      "head": 13,
+      "tail": 19,
+      "type": "treats",
+      "evidence": "IPT is a psychotherapy method for major depressive disorder."
+    },
+    {
+      "head": 14,
+      "tail": 19,
+      "type": "treats",
+      "evidence": "rTMS is a neuromodulation technique used for major depressive disorder."
+    },
+    {
+      "head": 15,
+      "tail": 19,
+      "type": "treats",
+      "evidence": "tDCS is a non-invasive brain stimulation technique for major depressive disorder."
+    },
+    {
+      "head": 16,
+      "tail": 20,
+      "type": "treats",
+      "evidence": "DBS is used for treatment-resistant depression."
+    },
+    {
+      "head": 17,
+      "tail": 19,
+      "type": "treats",
+      "evidence": "Psychodynamic therapy is a treatment approach for major depressive disorder."
+    }
+  ],
+  "interactions": [
+    {
+      "id": 1,
+      "entity_ids": [
+        1,
+        2
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Both fluoxetine and sertraline affect serotonin levels.",
+      "evidence": "Both are SSRIs and may increase the risk of serotonin syndrome when combined."
+    },
+    {
+      "id": 2,
+      "entity_ids": [
+        1,
+        3
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Fluoxetine and paroxetine both affect serotonin levels.",
+      "evidence": "Combining SSRIs can increase the risk of serotonin syndrome."
+    },
+    {
+      "id": 3,
+      "entity_ids": [
+        1,
+        4
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Fluoxetine and citalopram both affect serotonin levels.",
+      "evidence": "Increased risk of serotonin syndrome when combined."
+    },
+    {
+      "id": 4,
+      "entity_ids": [
+        1,
+        5
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Fluoxetine and escitalopram both affect serotonin levels.",
+      "evidence": "Increased risk of serotonin syndrome when combined."
+    },
+    {
+      "id": 5,
+      "entity_ids": [
+        1,
+        6
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Fluoxetine and venlafaxine both affect serotonin and norepinephrine.",
+      "evidence": "Potential for increased side effects due to overlapping mechanisms."
+    },
+    {
+      "id": 6,
+      "entity_ids": [
+        1,
+        7
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Fluoxetine and duloxetine both affect serotonin and norepinephrine.",
+      "evidence": "Potential for increased side effects due to overlapping mechanisms."
+    },
+    {
+      "id": 7,
+      "entity_ids": [
+        1,
+        8
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Fluoxetine and bupropion may have opposing effects on serotonin.",
+      "evidence": "Bupropion is a norepinephrine-dopamine reuptake inhibitor."
+    },
+    {
+      "id": 8,
+      "entity_ids": [
+        1,
+        9
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Fluoxetine and mirtazapine may have additive sedative effects.",
+      "evidence": "Mirtazapine can cause sedation, which may be enhanced by fluoxetine."
+    },
+    {
+      "id": 9,
+      "entity_ids": [
+        1,
+        10
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Fluoxetine and ketamine may have additive effects on serotonin.",
+      "evidence": "Both can influence serotonin levels, increasing the risk of serotonin syndrome."
+    },
+    {
+      "id": 10,
+      "entity_ids": [
+        2,
+        3
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Sertraline and paroxetine both affect serotonin levels.",
+      "evidence": "Increased risk of serotonin syndrome when combined."
+    },
+    {
+      "id": 11,
+      "entity_ids": [
+        2,
+        4
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Sertraline and citalopram both affect serotonin levels.",
+      "evidence": "Increased risk of serotonin syndrome when combined."
+    },
+    {
+      "id": 12,
+      "entity_ids": [
+        2,
+        5
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Sertraline and escitalopram both affect serotonin levels.",
+      "evidence": "Increased risk of serotonin syndrome when combined."
+    },
+    {
+      "id": 13,
+      "entity_ids": [
+        2,
+        6
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Sertraline and venlafaxine both affect serotonin and norepinephrine.",
+      "evidence": "Potential for increased side effects due to overlapping mechanisms."
+    },
+    {
+      "id": 14,
+      "entity_ids": [
+        2,
+        7
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Sertraline and duloxetine both affect serotonin and norepinephrine.",
+      "evidence": "Potential for increased side effects due to overlapping mechanisms."
+    },
+    {
+      "id": 15,
+      "entity_ids": [
+        2,
+        8
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Sertraline and bupropion may have opposing effects on serotonin.",
+      "evidence": "Bupropion is a norepinephrine-dopamine reuptake inhibitor."
+    },
+    {
+      "id": 16,
+      "entity_ids": [
+        2,
+        9
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Sertraline and mirtazapine may have additive sedative effects.",
+      "evidence": "Mirtazapine can cause sedation, which may be enhanced by sertraline."
+    },
+    {
+      "id": 17,
+      "entity_ids": [
+        2,
+        10
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Sertraline and ketamine may have additive effects on serotonin.",
+      "evidence": "Both can influence serotonin levels, increasing the risk of serotonin syndrome."
+    },
+    {
+      "id": 18,
+      "entity_ids": [
+        3,
+        4
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Paroxetine and citalopram both affect serotonin levels.",
+      "evidence": "Increased risk of serotonin syndrome when combined."
+    },
+    {
+      "id": 19,
+      "entity_ids": [
+        3,
+        5
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Paroxetine and escitalopram both affect serotonin levels.",
+      "evidence": "Increased risk of serotonin syndrome when combined."
+    },
+    {
+      "id": 20,
+      "entity_ids": [
+        3,
+        6
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Paroxetine and venlafaxine both affect serotonin and norepinephrine.",
+      "evidence": "Potential for increased side effects due to overlapping mechanisms."
+    },
+    {
+      "id": 21,
+      "entity_ids": [
+        3,
+        7
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Paroxetine and duloxetine both affect serotonin and norepinephrine.",
+      "evidence": "Potential for increased side effects due to overlapping mechanisms."
+    },
+    {
+      "id": 22,
+      "entity_ids": [
+        3,
+        8
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Paroxetine and bupropion may have opposing effects on serotonin.",
+      "evidence": "Bupropion is a norepinephrine-dopamine reuptake inhibitor."
+    },
+    {
+      "id": 23,
+      "entity_ids": [
+        3,
+        9
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Paroxetine and mirtazapine may have additive sedative effects.",
+      "evidence": "Mirtazapine can cause sedation, which may be enhanced by paroxetine."
+    },
+    {
+      "id": 24,
+      "entity_ids": [
+        3,
+        10
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Paroxetine and ketamine may have additive effects on serotonin.",
+      "evidence": "Both can influence serotonin levels, increasing the risk of serotonin syndrome."
+    },
+    {
+      "id": 25,
+      "entity_ids": [
+        4,
+        5
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Citalopram and escitalopram both affect serotonin levels.",
+      "evidence": "Increased risk of serotonin syndrome when combined."
+    },
+    {
+      "id": 26,
+      "entity_ids": [
+        4,
+        6
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Citalopram and venlafaxine both affect serotonin and norepinephrine.",
+      "evidence": "Potential for increased side effects due to overlapping mechanisms."
+    },
+    {
+      "id": 27,
+      "entity_ids": [
+        4,
+        7
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Citalopram and duloxetine both affect serotonin and norepinephrine.",
+      "evidence": "Potential for increased side effects due to overlapping mechanisms."
+    },
+    {
+      "id": 28,
+      "entity_ids": [
+        4,
+        8
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Citalopram and bupropion may have opposing effects on serotonin.",
+      "evidence": "Bupropion is a norepinephrine-dopamine reuptake inhibitor."
+    },
+    {
+      "id": 29,
+      "entity_ids": [
+        4,
+        9
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Citalopram and mirtazapine may have additive sedative effects.",
+      "evidence": "Mirtazapine can cause sedation, which may be enhanced by citalopram."
+    },
+    {
+      "id": 30,
+      "entity_ids": [
+        4,
+        10
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Citalopram and ketamine may have additive effects on serotonin.",
+      "evidence": "Both can influence serotonin levels, increasing the risk of serotonin syndrome."
+    },
+    {
+      "id": 31,
+      "entity_ids": [
+        5,
+        6
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Escitalopram and venlafaxine both affect serotonin and norepinephrine.",
+      "evidence": "Potential for increased side effects due to overlapping mechanisms."
+    },
+    {
+      "id": 32,
+      "entity_ids": [
+        5,
+        7
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Escitalopram and duloxetine both affect serotonin and norepinephrine.",
+      "evidence": "Potential for increased side effects due to overlapping mechanisms."
+    },
+    {
+      "id": 33,
+      "entity_ids": [
+        5,
+        8
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Escitalopram and bupropion may have opposing effects on serotonin.",
+      "evidence": "Bupropion is a norepinephrine-dopamine reuptake inhibitor."
+    },
+    {
+      "id": 34,
+      "entity_ids": [
+        5,
+        9
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Escitalopram and mirtazapine may have additive sedative effects.",
+      "evidence": "Mirtazapine can cause sedation, which may be enhanced by escitalopram."
+    },
+    {
+      "id": 35,
+      "entity_ids": [
+        5,
+        10
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Escitalopram and ketamine may have additive effects on serotonin.",
+      "evidence": "Both can influence serotonin levels, increasing the risk of serotonin syndrome."
+    },
+    {
+      "id": 36,
+      "entity_ids": [
+        6,
+        7
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Venlafaxine and duloxetine both affect serotonin and norepinephrine.",
+      "evidence": "Potential for increased side effects due to overlapping mechanisms."
+    },
+    {
+      "id": 37,
+      "entity_ids": [
+        6,
+        8
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Venlafaxine and bupropion may have opposing effects on serotonin.",
+      "evidence": "Bupropion is a norepinephrine-dopamine reuptake inhibitor."
+    },
+    {
+      "id": 38,
+      "entity_ids": [
+        6,
+        9
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Venlafaxine and mirtazapine may have additive sedative effects.",
+      "evidence": "Mirtazapine can cause sedation, which may be enhanced by venlafaxine."
+    },
+    {
+      "id": 39,
+      "entity_ids": [
+        6,
+        10
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Venlafaxine and ketamine may have additive effects on serotonin.",
+      "evidence": "Both can influence serotonin levels, increasing the risk of serotonin syndrome."
+    },
+    {
+      "id": 40,
+      "entity_ids": [
+        7,
+        8
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Duloxetine and bupropion may have opposing effects on serotonin.",
+      "evidence": "Bupropion is a norepinephrine-dopamine reuptake inhibitor."
+    },
+    {
+      "id": 41,
+      "entity_ids": [
+        7,
+        9
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Duloxetine and mirtazapine may have additive sedative effects.",
+      "evidence": "Mirtazapine can cause sedation, which may be enhanced by duloxetine."
+    },
+    {
+      "id": 42,
+      "entity_ids": [
+        7,
+        10
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Duloxetine and ketamine may have additive effects on serotonin.",
+      "evidence": "Both can influence serotonin levels, increasing the risk of serotonin syndrome."
+    },
+    {
+      "id": 43,
+      "entity_ids": [
+        8,
+        9
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Bupropion and mirtazapine may have additive sedative effects.",
+      "evidence": "Mirtazapine can cause sedation, which may be enhanced by bupropion."
+    },
+    {
+      "id": 44,
+      "entity_ids": [
+        8,
+        10
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Bupropion and ketamine may have additive effects on serotonin.",
+      "evidence": "Both can influence serotonin levels, increasing the risk of serotonin syndrome."
+    },
+    {
+      "id": 45,
+      "entity_ids": [
+        9,
+        10
+      ],
+      "interaction_type": "use_with_caution",
+      "note": "Mirtazapine and ketamine may have additive effects on serotonin.",
+      "evidence": "Both can influence serotonin levels, increasing the risk of serotonin syndrome."
+    }
+  ]
+}
