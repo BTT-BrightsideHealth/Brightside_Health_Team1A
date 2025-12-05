@@ -7,6 +7,6 @@
 
 
 To run: `docker compose up --build -d neo4j`
-To run Graph generator: `docker compose -f 'docker-compose.yml' up -d --build 'loader'`
+To run Graph generator: `docker compose -f 'docker-compose.yml' up --build 'loader'`
 Go to: http://localhost:7474/browser/
 Run `docker compose down` to stop contianers from running
