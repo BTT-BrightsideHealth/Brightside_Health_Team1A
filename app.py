@@ -78,6 +78,10 @@ SAMPLE_DATA = {
 }
 
 # Neo4j connection configuration
+# For Streamlit Cloud, set these in Secrets (Settings → Secrets):
+# NEO4J_URI = "bolt://your-host:7687" or "neo4j+s://your-aura-instance.databases.neo4j.io" (for Aura)
+# NEO4J_USER = "your-user" (optional if no auth)
+# NEO4J_PASSWORD = "your-password" (optional if no auth)
 NEO4J_URI = os.getenv("NEO4J_URI", "bolt://neo4j:7687")
 NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "test1234")
@@ -87,9 +91,17 @@ NODE_TYPES = ["medical_condition", "medication", "treatment_type", "outcome", "m
 
 @st.cache_resource
 def get_neo4j_driver():
-    """Get Neo4j driver connection (cached)."""
+    """Get Neo4j driver connection (cached). Supports both authenticated and unauthenticated connections."""
     try:
-        driver = GraphDatabase.driver(NEO4J_URI, auth=None)
+        # Check if authentication is provided
+        # If NEO4J_USER is set and not empty, use auth; otherwise use auth=None
+        if NEO4J_USER and NEO4J_USER.strip():
+            auth = (NEO4J_USER, NEO4J_PASSWORD) if NEO4J_PASSWORD else None
+            driver = GraphDatabase.driver(NEO4J_URI, auth=auth)
+        else:
+            # No auth provided, use auth=None
+            driver = GraphDatabase.driver(NEO4J_URI, auth=None)
+        
         # Test connection
         with driver.session() as session:
             session.run("RETURN 1")
@@ -696,6 +708,31 @@ def main():
     # Main content area - full width graph
     # Node selector dropdown - use full graph data for options
     graph_data = st.session_state.graph_data
+
+    # If there's a search query, try to select a matching node
+    if search_query:
+        q = search_query.strip().lower()
+        if q:
+            # 1) exact id match (rare but nice to support)
+            match = next(
+                (n for n in graph_data["nodes"] if str(n["id"]).lower() == q),
+                None
+            )
+            # 2) label contains query (case-insensitive)
+            if not match:
+                match = next(
+                    (
+                        n for n in graph_data["nodes"]
+                        if q in str(n.get("label", "")).lower()
+                    ),
+                    None
+                )
+
+            if match:
+                st.session_state.selected_node = str(match["id"])
+            else:
+                st.warning(f"No node found matching '{search_query}'. Showing full graph.")
+
     node_options = ["None"] + [f"{node['label']} (ID: {node['id']})" for node in graph_data["nodes"]]
     node_ids = [None] + [str(node["id"]) for node in graph_data["nodes"]]
     
