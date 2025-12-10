@@ -32,7 +32,7 @@ Run `docker compose down` to stop contianers from running
 ---
 
 ## 🏗️ **Project Overview**
-Emerging medical research on depression and anxiety is fragmented across thousands of research papers. Each study contains valuable insights—about causes, therapeutic methods, medication interactions, and patient outcomes—but this information is locked inside dense, technical text that can be difficult for clinicians to rapidly ingest and apply in practice.
+Emerging medical research on depression and anxiety is fragmented across thousands of research papers. Each study contains valuable insights—about causes, therapeutic methods, medication interactions, and patient outcomes but this information is locked inside dense, technical text that can be difficult for clinicians to rapidly ingest and apply in practice.
 
 🤝 Break Through Tech AI Program
 This project was developed as part of the Break Through Tech AI Program, which connects undergraduate students with industry partners to work on real-world AI challenges. Through this program, our team collaborated with Brightside Health to address a critical challenge in healthcare information accessibility and clinical decision support.
