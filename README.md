@@ -2,7 +2,7 @@
 ### 👥 **Team Members**
 | Name             | GitHub Handle | Contribution                                                             |
 |------------------|---------------|--------------------------------------------------------------------------|
-| Aline Jouaidi    | @Alinejj      | Generating the finalized JSON output                                     |
+| Aline Jouaidi    | @Alinejj      | Generated the finalized JSON output                                      |
 | Sahithi          | @             |                                                                          |
 | Edwin            | @             |                                                                          |
 | Krrish           | @             |                                                                          |
@@ -11,10 +11,7 @@
 ---
 
 ## 🎯 **Project Highlights**
-
-**Example:**
-
-- Developed a machine learning model using `[model type/technique]` to address `[challenge project task]`.
+- Developed a machine learning model using Chatgpt 4o to help clinicians with decision making prescriptions for depression and anxiety.
 - Achieved `[key metric or result]`, demonstrating `[value or impact]` for `[host company]`.
 - Generated actionable insights to inform business decisions at `[host company or stakeholders]`.
 - Implemented `[specific methodology]` to address industry constraints or expectations.
@@ -22,24 +19,55 @@
 ---
 
 ## 👩🏽‍💻 **Setup and Installation**
+1. Copy `.env.example` → `.env`
+2. Open `.env` and paste your real OpenAI key:
+3. 3. Run `python test_env.py` to check the key is loaded
 
-**Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
 
-* How to clone the repository
-* How to install dependencies
-* How to set up the environment
-* How to access the dataset(s)
-* How to run the notebook or scripts
+To run: `docker compose up --build -d neo4j`
+To run Graph generator: `docker compose -f 'docker-compose.yml' up -d --build 'loader'`
+Go to: http://localhost:7474/browser/
+Run `docker compose down` to stop contianers from running
 
 ---
 
 ## 🏗️ **Project Overview**
+Emerging medical research on depression and anxiety is fragmented across thousands of research papers. Each study contains valuable insights—about causes, therapeutic methods, medication interactions, and patient outcomes—but this information is locked inside dense, technical text that can be difficult for clinicians to rapidly ingest and apply in practice.
 
-**Describe:**
+🤝 Break Through Tech AI Program
+This project was developed as part of the Break Through Tech AI Program, which connects undergraduate students with industry partners to work on real-world AI challenges. Through this program, our team collaborated with Brightside Health to address a critical challenge in healthcare information accessibility and clinical decision support.
 
-- How this project is connected to the Break Through Tech AI Program
-- Your AI Studio host company and the project objective and scope
-- The real-world significance of the problem and the potential impact of your work
+🏥 AI Studio Host: Brightside Health
+Brightside Health, our AI Studio host, is a leading virtual mental healthcare provider that delivers evidence-based treatment for depression and anxiety through a combination of therapy and psychiatry.
+Project Objective
+Develop an AI-powered system that can extract, synthesize, and present key findings from mental health research papers in a knowledge graph that is accessible and actionable for Brightside's clinicians.
+
+🌍 Real-World Significance
+**The Challenge**
+The growing mental health crisis, affecting over 280 million people worldwide with depression alone, demands that clinicians have rapid access to the latest research findings. However:
+  - Clinicians can spend only 2-5 hours per month on professional reading
+  - An estimated 75 new clinical trials and studies are published daily across all medical fields
+  - The average time for research findings to reach clinical practice is 17 years
+
+**The Impact**
+This disconnect between knowledge generation and knowledge application has real consequences: delayed adoption of effective treatments, inconsistent care quality, and missed opportunities for evidence-based interventions.
+For a virtual-first provider like Brightside Health serving thousands of patients across multiple states, ensuring clinicians have access to the latest evidence is particularly crucial for maintaining high-quality, personalized care at scale.
+
+💡 Potential Impact
+Our AI solution has the potential to:
+⚡ Accelerate Evidence-Based Care
+Enable Brightside's clinicians to quickly access synthesized findings from multiple studies, informing treatment decisions
+📈 Improve Patient Outcomes
+Help providers stay current with emerging therapeutic approaches, medication insights, and combination treatment strategies
+🔄 Scale Clinical Excellence
+Support Brightside's mission to provide consistent, high-quality mental healthcare by democratizing access to research insights across their clinical team
+👤 Support Personalized Treatment
+Provide rapid, relevant information that helps clinicians tailor interventions to individual patient needs and circumstances
+⏰ Reduce Provider Burden
+Free up clinician time currently spent on literature review, allowing more focus on direct patient care
+
+🎯 Vision
+By transforming how mental health research is accessed and utilized, this project could fundamentally improve the speed at which medical breakthroughs reach patients who need them most, while supporting Brightside Health's vision of making quality mental healthcare accessible to all.
 
 ---
 
@@ -47,14 +75,12 @@
 
 **You might consider describing the following (as applicable):**
 
-* The dataset(s) used: origin, format, size, type of data
+* The dataset(s) used: Three research papers about depression and anxiety
 * Data exploration and preprocessing approaches
 * Insights from your Exploratory Data Analysis (EDA)
 * Challenges and assumptions when working with the dataset(s)
 
-**Potential visualizations to include:**
-
-* Plots, charts, heatmaps, feature visualizations, sample dataset images
+Edwin: add visuals for the knowledge graph
 
 ---
 
@@ -93,30 +119,6 @@
 
 ---
 
-## 📝 **License**
-
-If applicable, indicate how your project can be used by others by specifying and linking to an open source license type (e.g., MIT, Apache 2.0). Make sure your Challenge Advisor approves of the selected license type.
-
-**Example:**
-This project is licensed under the MIT License.
-
----
-
-## 📄 **References** (Optional but encouraged)
-
-Cite relevant papers, articles, or resources that supported your project.
-
----
-
 ## 🙏 **Acknowledgements** (Optional but encouraged)
-1. Copy `.env.example` → `.env`
-2. Open `.env` and paste your real OpenAI key:
-3. 3. Run `python test_env.py` to check the key is loaded
-
-
-To run: `docker compose up --build -d neo4j`
-To run Graph generator: `docker compose -f 'docker-compose.yml' up -d --build 'loader'`
-Go to: http://localhost:7474/browser/
-Run `docker compose down` to stop contianers from running
 
 Thank your Challenge Advisor, host company representatives, TA, and others who supported your project.
