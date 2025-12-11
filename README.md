@@ -34,15 +34,15 @@ Run `docker compose down` to stop contianers from running
 ## 🏗️ **Project Overview**
 Emerging medical research on depression and anxiety is fragmented across thousands of research papers. Each study contains valuable insights—about causes, therapeutic methods, medication interactions, and patient outcomes but this information is locked inside dense, technical text that can be difficult for clinicians to rapidly ingest and apply in practice.
 
-🤝 Break Through Tech AI Program
+🤝 **Break Through Tech AI Program**
 This project was developed as part of the Break Through Tech AI Program, which connects undergraduate students with industry partners to work on real-world AI challenges. Through this program, our team collaborated with Brightside Health to address a critical challenge in healthcare information accessibility and clinical decision support.
 
-🏥 AI Studio Host: Brightside Health
+🏥 **AI Studio Host: Brightside Health**
 Brightside Health, our AI Studio host, is a leading virtual mental healthcare provider that delivers evidence-based treatment for depression and anxiety through a combination of therapy and psychiatry.
 Project Objective
 Develop an AI-powered system that can extract, synthesize, and present key findings from mental health research papers in a knowledge graph that is accessible and actionable for Brightside's clinicians.
 
-🌍 Real-World Significance
+🌍 **Real-World Significance**
 **The Challenge**
 The growing mental health crisis, affecting over 280 million people worldwide with depression alone, demands that clinicians have rapid access to the latest research findings. However:
   - Clinicians can spend only 2-5 hours per month on professional reading
@@ -53,20 +53,25 @@ The growing mental health crisis, affecting over 280 million people worldwide wi
 This disconnect between knowledge generation and knowledge application has real consequences: delayed adoption of effective treatments, inconsistent care quality, and missed opportunities for evidence-based interventions.
 For a virtual-first provider like Brightside Health serving thousands of patients across multiple states, ensuring clinicians have access to the latest evidence is particularly crucial for maintaining high-quality, personalized care at scale.
 
-💡 Potential Impact
+💡 **Potential Impact**
 Our AI solution has the potential to:
-⚡ Accelerate Evidence-Based Care
+
+⚡**Accelerate Evidence-Based Care**
 Enable Brightside's clinicians to quickly access synthesized findings from multiple studies, informing treatment decisions
-📈 Improve Patient Outcomes
+
+📈 **Improve Patient Outcomes**
 Help providers stay current with emerging therapeutic approaches, medication insights, and combination treatment strategies
-🔄 Scale Clinical Excellence
+
+🔄 **Scale Clinical Excellence**
 Support Brightside's mission to provide consistent, high-quality mental healthcare by democratizing access to research insights across their clinical team
-👤 Support Personalized Treatment
+
+👤 **Support Personalized Treatment**
 Provide rapid, relevant information that helps clinicians tailor interventions to individual patient needs and circumstances
-⏰ Reduce Provider Burden
+
+⏰ **Reduce Provider Burden**
 Free up clinician time currently spent on literature review, allowing more focus on direct patient care
 
-🎯 Vision
+🎯 **Vision**
 By transforming how mental health research is accessed and utilized, this project could fundamentally improve the speed at which medical breakthroughs reach patients who need them most, while supporting Brightside Health's vision of making quality mental healthcare accessible to all.
 
 ---
