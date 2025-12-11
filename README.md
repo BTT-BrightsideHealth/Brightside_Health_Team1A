@@ -128,8 +128,6 @@ Edwin: add visuals for the knowledge graph
 
 ## 🚀 **Next Steps**
 
-**You might consider addressing the following (as applicable):**
-
 * Implement filtering and search functionality by medication, condition, therapy type, or patient demographics
 * Conduct pilot testing with Brightside Health clinicians
 * Implement automated pipeline to continuously ingest new research publications
