@@ -106,9 +106,13 @@ Edwin: add visuals for the knowledge graph
 Our system employs a Large Language Model (LLM)-based extraction pipeline using OpenAI's GPT-4o-mini to transform unstructured research text into structured knowledge graph representations.
 
 **Model Selection**
+
 **Primary Model:** GPT-4o-mini
+
 **Rationale:** Chosen for its strong performance on information extraction tasks, cost-efficiency for processing large volumes of text, and ability to understand complex medical terminology
+
 **Task:** Named Entity Recognition (NER) and Relationship Extraction from mental health research papers
+
 **Temperature:** 0.2 (low temperature for consistent, factual extraction)
 
 ---
