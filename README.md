@@ -130,9 +130,10 @@ Edwin: add visuals for the knowledge graph
 
 **You might consider addressing the following (as applicable):**
 
-* What are some of the limitations of your model?
-* What would you do differently with more time/resources?
-* What additional datasets or techniques would you explore?
+* Implement filtering and search functionality by medication, condition, therapy type, or patient demographics
+* Conduct pilot testing with Brightside Health clinicians
+* Implement automated pipeline to continuously ingest new research publications
+* Enable clinicians to annotate and contribute insights to the knowledge graph
 
 ---
 
