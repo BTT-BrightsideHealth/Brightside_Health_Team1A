@@ -11,10 +11,10 @@
 ---
 
 ## 🎯 **Project Highlights**
-- Developed a machine learning model using Chatgpt 4o to help clinicians with decision making prescriptions for depression and anxiety.
-- Achieved `[key metric or result]`, demonstrating `[value or impact]` for `[host company]`.
-- Generated actionable insights to inform business decisions at `[host company or stakeholders]`.
-- Implemented `[specific methodology]` to address industry constraints or expectations.
+* Developed a machine learning model using Chatgpt 4o to help clinicians with decision making prescriptions for depression and anxiety.
+* Achieved `[key metric or result]`, demonstrating `[value or impact]` for `[host company]`.
+* Generated actionable insights to inform business decisions at `[host company or stakeholders]`.
+* Implemented `[specific methodology]` to address industry constraints or expectations.
 
 ---
 
@@ -103,17 +103,18 @@ Edwin: add visuals for the knowledge graph
 
 ## 🧠 **Model Development**
 
-**You might consider describing the following (as applicable):**
+Our system employs a Large Language Model (LLM)-based extraction pipeline using OpenAI's GPT-4o-mini to transform unstructured research text into structured knowledge graph representations.
 
-* Model(s) used (e.g., CNN with transfer learning, regression models)
-* Feature selection and Hyperparameter tuning strategies
-* Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
-
+**Model Selection**
+**Primary Model:** GPT-4o-mini
+**Rationale:** Chosen for its strong performance on information extraction tasks, cost-efficiency for processing large volumes of text, and ability to understand complex medical terminology
+**Task:** Named Entity Recognition (NER) and Relationship Extraction from mental health research papers
+**Temperature:** 0.2 (low temperature for consistent, factual extraction)
 
 ---
 
 ## 📈 **Results & Key Findings**
-
+(can talk about knowledge graph here)
 **You might consider describing the following (as applicable):**
 
 * Performance metrics (e.g., Accuracy, F1 score, RMSE)
@@ -135,6 +136,6 @@ Edwin: add visuals for the knowledge graph
 
 ---
 
-## 🙏 **Acknowledgements** (Optional but encouraged)
+## 🙏 **Acknowledgements** 
 
-Thank your Challenge Advisor, host company representatives, TA, and others who supported your project.
+We want to thank our Challenge Advisors Andrew and Diane, our coach Harshini, and others who supported our project.
