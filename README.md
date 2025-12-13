@@ -5,7 +5,7 @@
 | Aline Jouaidi    | @Alinejj      | Generated the finalized JSON output                                      |
 | Sahithi          | @             |                                                                          |
 | Edwin            | @             |                                                                          |
-| Krrish           | @             |                                                                          |
+| Krrish           | @krrish-kohli | Built the prompt and helped in JSON extraction                           |
 | Tiffany          | @             |                                                                          |
 
 ---
