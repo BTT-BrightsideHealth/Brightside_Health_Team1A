@@ -97,7 +97,8 @@ By transforming how mental health research is accessed and utilized, this projec
 * Insights from your Exploratory Data Analysis (EDA)
 * Challenges and assumptions when working with the dataset(s)
 
-Edwin: add visuals for the knowledge graph
+Edwin: <img width="496" height="317" alt="Screenshot 2025-12-14 at 12 43 25 PM" src="https://github.com/user-attachments/assets/d63bd0e0-adac-41a1-a72b-aa0239ff1ff0" />
+
 
 ---
 
