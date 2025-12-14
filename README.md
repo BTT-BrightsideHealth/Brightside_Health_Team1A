@@ -3,10 +3,10 @@
 | Name             | GitHub Handle | Contribution                                                             |
 |------------------|---------------|--------------------------------------------------------------------------|
 | Aline Jouaidi    | @Alinejj      | Generated the finalized JSON output                                      |
-| Sahithi          | @             |                                                                          |
-| Edwin            | @             |                                                                          |
+| Sahithi          | @smatta27     | Helped develop the website and prompt                                    |
+| Edwin            | @edwaddle     | Created the knoweledge graph and helped develope the website             |
 | Krrish           | @krrish-kohli | Built the prompt and helped in JSON extraction                           |
-| Tiffany          | @             |                                                                          |
+| Tiffany          | @tiffany-mo   | Helped develop the website and prompt                                    |
 
 ---
 
@@ -97,7 +97,6 @@ By transforming how mental health research is accessed and utilized, this projec
 * Insights from your Exploratory Data Analysis (EDA)
 * Challenges and assumptions when working with the dataset(s)
 
-Edwin: <img width="496" height="317" alt="Screenshot 2025-12-14 at 12 43 25 PM" src="https://github.com/user-attachments/assets/d63bd0e0-adac-41a1-a72b-aa0239ff1ff0" />
 
 
 ---
@@ -130,7 +129,18 @@ Our system employs a Large Language Model (LLM)-based extraction pipeline using 
 
 * Confusion matrix, precision-recall curve, feature importance plot, prediction distribution, outputs from fairness or explainability tools
 
+ <img width="496" height="317" alt="Screenshot 2025-12-14 at 12 43 25 PM" src="https://github.com/user-attachments/assets/d63bd0e0-adac-41a1-a72b-aa0239ff1ff0" />
+
 ---
+
+## Website 
+We built an interactive website to visualize the knowledge graph and make exploring mental health data easier. Users can search terms like “depression” or “sertraline” to see related nodes highlighted in yellow.
+
+Built with Streamlit and hosted on Streamlit Cloud, the site offers a simple, visual way to explore relationships between conditions, medications, and treatments
+
+<img width="483" height="395" alt="Screenshot 2025-12-14 at 12 53 56 PM" src="https://github.com/user-attachments/assets/01f1acae-dda3-4f48-ab78-a1db041ff7e2" />
+<img width="314" height="405" alt="Screenshot 2025-12-14 at 12 54 05 PM" src="https://github.com/user-attachments/assets/3d537013-4063-442b-b9e5-a2a65ef08fc5" />
+
 
 ## 🚀 **Next Steps**
 
