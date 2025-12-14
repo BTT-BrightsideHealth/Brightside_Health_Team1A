@@ -118,16 +118,12 @@ Our system employs a Large Language Model (LLM)-based extraction pipeline using 
 ---
 
 ## 📈 **Results & Key Findings**
-(can talk about knowledge graph here)
-**You might consider describing the following (as applicable):**
 
-* Performance metrics (e.g., Accuracy, F1 score, RMSE)
-* How your model performed
-* Insights from evaluating model fairness
+When we first ran the extraction with GPT-4o-mini, our JSON file came out to almost 19,000 lines of data. A lot of that information was repetitive or unrelated to what clinicians actually needed. It was hard to find useful relationships, and the knowledge graph ended up cluttered with duplicate nodes and confusing links.
 
-**Potential visualizations to include:**
+After several rounds of refining our prompts, cleaning the data, and adjusting how we structured the output, we reduced the file to about 1,900 lines. This made the data much cleaner and easier to interpret while still keeping all the key details about depression, anxiety, and treatments.
 
-* Confusion matrix, precision-recall curve, feature importance plot, prediction distribution, outputs from fairness or explainability tools
+With the refined dataset, Edwin’s updated knowledge graph became far more organized and accurate. Relationships between concepts like “sertraline treats depression” or “CBT helps reduce anxiety” were clearer and easier to explore. The new version allowed us to see meaningful patterns and made the information more practical for clinicians to use in decision-making.
 
 <img width="487" height="313" alt="Screenshot 2025-12-14 at 1 01 56 PM" src="https://github.com/user-attachments/assets/894ffee6-9d47-413a-8af2-e17693b66b82" />
 
