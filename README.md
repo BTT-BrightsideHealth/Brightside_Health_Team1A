@@ -129,10 +129,11 @@ Our system employs a Large Language Model (LLM)-based extraction pipeline using 
 
 * Confusion matrix, precision-recall curve, feature importance plot, prediction distribution, outputs from fairness or explainability tools
 
+<img width="487" height="313" alt="Screenshot 2025-12-14 at 1 01 56 PM" src="https://github.com/user-attachments/assets/894ffee6-9d47-413a-8af2-e17693b66b82" />
 
-<img width="491" height="310" alt="Screenshot 2025-12-14 at 1 00 45 PM" src="https://github.com/user-attachments/assets/535a6d1e-4b5e-43c0-9bd7-f
+
 <img width="123" height="127" alt="Screenshot 2025-12-14 at 1 01 02 PM" src="https://github.com/user-attachments/assets/7e619f23-65fa-44cd-99c1-90659ffd309d" />
-7fb6665e4d9" />
+
 <img width="123" height="110" alt="Screenshot 2025-12-14 at 1 01 15 PM" src="https://github.com/user-attachments/assets/59c3c742-e3df-4f93-8f0d-d4aa317c10dc" />
 
 ---
