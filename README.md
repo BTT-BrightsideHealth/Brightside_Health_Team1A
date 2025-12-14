@@ -129,7 +129,11 @@ Our system employs a Large Language Model (LLM)-based extraction pipeline using 
 
 * Confusion matrix, precision-recall curve, feature importance plot, prediction distribution, outputs from fairness or explainability tools
 
- <img width="496" height="317" alt="Screenshot 2025-12-14 at 12 43 25 PM" src="https://github.com/user-attachments/assets/d63bd0e0-adac-41a1-a72b-aa0239ff1ff0" />
+
+<img width="491" height="310" alt="Screenshot 2025-12-14 at 1 00 45 PM" src="https://github.com/user-attachments/assets/535a6d1e-4b5e-43c0-9bd7-f
+<img width="123" height="127" alt="Screenshot 2025-12-14 at 1 01 02 PM" src="https://github.com/user-attachments/assets/7e619f23-65fa-44cd-99c1-90659ffd309d" />
+7fb6665e4d9" />
+<img width="123" height="110" alt="Screenshot 2025-12-14 at 1 01 15 PM" src="https://github.com/user-attachments/assets/59c3c742-e3df-4f93-8f0d-d4aa317c10dc" />
 
 ---
 
@@ -138,9 +142,10 @@ We built an interactive website to visualize the knowledge graph and make explor
 
 Built with Streamlit and hosted on Streamlit Cloud, the site offers a simple, visual way to explore relationships between conditions, medications, and treatments
 
-<img width="483" height="395" alt="Screenshot 2025-12-14 at 12 53 56 PM" src="https://github.com/user-attachments/assets/01f1acae-dda3-4f48-ab78-a1db041ff7e2" />
-<img width="314" height="405" alt="Screenshot 2025-12-14 at 12 54 05 PM" src="https://github.com/user-attachments/assets/3d537013-4063-442b-b9e5-a2a65ef08fc5" />
+<img width="310" height="391" alt="Screenshot 2025-12-14 at 1 00 15 PM" src="https://github.com/user-attachments/assets/be932afb-5f65-4bdb-95ab-ecaa3bdbad08" />
 
+
+<img width="469" height="389" alt="Screenshot 2025-12-14 at 1 00 27 PM" src="https://github.com/user-attachments/assets/6dd55482-71db-467b-82a0-38c76f998a9d" />
 
 ## 🚀 **Next Steps**
 
